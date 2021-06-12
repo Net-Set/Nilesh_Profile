@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* ::before,
+* ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #34302d;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f70202;
+  background: linear-gradient(148deg, #f70202 0%, #5047ff 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.profile_container {
+  border-radius: 16px;
+  width: 660px;
+  height: 340px;
+  margin: 25px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1), 0px 0px 10px rgba(255, 255, 255, 0.15);
+          box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1), 0px 0px 10px rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 600px) {
+  .profile_container {
+    height: 500px;
+  }
+}
+
+.profile_container::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(223, 228, 255, 0.3);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.profile_container .wraps {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.profile_container .wraps .profile_img {
+  width: 40%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  height: calc(100% + 1px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-clip-path: ellipse(100% 85% at 0% 50%);
+          clip-path: ellipse(100% 85% at 0% 50%);
+  background: url(profile_Nilesh.jpeg) no-repeat top;
+  background-size: auto 114%;
+  background-position-x: center;
+  background-color: rgba(223, 228, 255, 0.25);
+}
+
+@media (max-width: 600px) {
+  .profile_container .wraps .profile_img {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    height: 60%;
+    position: static;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+  }
+}
+
+.profile_container .wraps .profile_img span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(111.1deg, #002846 -4.8%, #ff7373 82.7%, #ffaf7b 97.2%);
+  opacity: 0.16;
+}
+
+.profile_container .wraps .profile_details {
+  width: 60%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .profile_container .wraps .profile_details {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    height: 40%;
+    position: static;
+    padding: 20px 15px;
+  }
+}
+
+.profile_container .wraps .profile_details .username {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0px;
+  margin-bottom: 0px;
+}
+
+.profile_container .wraps .profile_details .user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile_container .wraps .profile_details .user_info .info {
+  background-color: #333;
+  padding: 0px 10px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin: auto 5px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.profile_container .wraps .profile_details .user_info .info:first-child {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f857a6), color-stop(51%, #ff5858), to(#f857a6));
+  background-image: linear-gradient(to right, #f857a6 0%, #ff5858 51%, #f857a6 100%);
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+.profile_container .wraps .profile_details .user_info .info:first-child:hover {
+  background-position: right center;
+}
+
+.profile_container .wraps .profile_details .user_info .info:last-child {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d53369), color-stop(51%, #8e6dcb), to(#d53369));
+  background-image: linear-gradient(to right, #d53369 0%, #8e6dcb 51%, #d53369 100%);
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+.profile_container .wraps .profile_details .user_info .info:last-child:hover {
+  background-position: right center;
+}
+
+.profile_container .wraps .profile_details .user_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile_container .wraps .profile_details .user_links .link_btn {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+  background-color: #333;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 10px;
+}
+
+.profile_container .wraps .profile_details .user_links .link_btn svg {
+  width: 25px;
+  height: 25px;
+}
+
+.profile_container .wraps .profile_details .user_links .link_btn svg:not(.fill) {
+  fill: none;
+  stroke: white;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/*# sourceMappingURL=style.css.map */
